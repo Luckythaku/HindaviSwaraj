@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kattar Sanatani - Facts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font: Mukta -->
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== Navbar ===== -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="https://cdn.pixabay.com/photo/2016/07/23/16/19/symbol-1537054_1280.png" alt="Logo" />
+      </a>
+      <div id="logo-text" class="logo-text"  >हिंदवी स्वराज</div>
+    </div>
+
+    <!-- Hamburger for mobile -->
+    <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+    <nav class="nav-links">
+      <a href="man.html">पुरुष</a>
+      <a href="woman.html">महिला</a>
+      <a href="parents.html">माता-पिता</a>
+      <a href="samaj.html">समाज</a>
+      <a href="seva.html">सेवा</a>
+      <a href="daan.html">दान</a>
+      <a href="store.html">स्टोर</a>
+    </nav>
+  </header>
+
+  <!-- ===== Landing ===== 
+  <section id="landing">
+    <div class="landing-content">
+      <h1>कट्टर सनातनी में आपका स्वागत है</h1>
+      <p>सनातन धर्म के हृदय से अनमोल तथ्य और ज्ञान खोजें।<br>पीढ़ियों से संचित प्राचीन बुद्धि को जानें।</p>
+      <a href="#facts" class="scroll-button">तथ्य देखें ↓</a>
+    </div>
+  </section>-->
+
+  <!-- ===== Facts ===== -->
+  <section id="facts">
+    <div class="container">
+      <div class="fact-card">
+        <p id="fact-number">तथ्य #1</p>
+        <p id="fact-text"></p>
+      </div>
+      <div class="navigation">
+        <button id="prev-fact">← पिछला</button>
+        <button id="next-fact">अगला →</button>
+      </div>
+    </div>
+  </section>
+
+<!-- ===== Scrolling Alert Bar ===== -->
+<div class="alert-bar">
+  <span class="alert-text">🔥 Upcoming Blog: "Secrets of Ancient Wisdom" — Stay Tuned! 🔔</span>
+</div>
+
+
+
+ <!-- ===== Coming Soon Section ===== -->
+<section id="coming-soon" class="coming-soon-section">
+  <div class="coming-box">
+    <h1 class="coming-title">🚀 Coming Soon</h1>
+    <p class="coming-subtitle">We are crafting something amazing. Stay tuned for the launch!</p>
+
+    <!-- Countdown -->
+    <div id="countdown" class="countdown">
+      <div><span id="days">00</span><small>Days</small></div>
+      <div><span id="hours">00</span><small>Hours</small></div>
+      <div><span id="minutes">00</span><small>Minutes</small></div>
+      <div><span id="seconds">00</span><small>Seconds</small></div>
+    </div>
+
+    <!-- Optional Email Signup -->
+    <form class="subscribe-form">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Notify Me</button>
+    </form>
+  </div>
+</section>
+
+  <!-- ===== Topics ===== -->
+  <section id="topics">
+    <h2 class="section-title"  style ="color: #fff; text-align: center;">Explore Topics</h2>
+    <div id="topics-list" class="tags-container"></div>
+  </section>
+
+  
+  <!-- ===== Footer ===== -->
+  <!-- ===== Footer Section ===== -->
+<footer class="site-footer">
+  <div class="footer-content">
+    
+    
+
+    <!-- Logo (clickable) -->
+    <a href="index.html" class="footer-logo">
+      <img src="https://media.istockphoto.com/id/1585020633/photo/saffron-flag-india.jpg?s=612x612&w=0&k=20&c=SBVPQuWBQLKVTb50CcfZoe3lSEoMMoGEXUhVizkdll4=" alt="Website Logo">
+    
+    </a>
+
+
+    <!-- Social Media Icons -->
+    <div class="footer-social">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <!-- Contact Us -->
+    <div class="footer-contact">
+      <a href="contact.html">📩 Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Go to Top Button -->
+  <button class="go-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">⬆</button>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

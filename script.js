@@ -28,16 +28,16 @@ document.addEventListener('DOMContentLoaded', () => {
   /* Topics */
  const topics = [
   { id: "man.html", title: "सनातन धर्म क्या है?" },
-  { id: "topic2.html", title: "ॐ का अर्थ" },
-  { id: "topic3.html", title: "योग का महत्व" },
-  { id: "topic4.html", title: "वेद और शास्त्र" },
-  { id: "topic5.html", title: "सेवा का महत्व" },
+  { id: "samaj.html", title: "ॐ का अर्थ" },
+  { id: "samaj.html", title: "योग का महत्व" },
+  { id: "samaj.html", title: "वेद और शास्त्र" },
+  { id: "samaj.html", title: "सेवा का महत्व" },
   
-   { id: "topic1.html", title: "सनातन धर्म क्या है?" },
-  { id: "topic6.html", title: "ॐ का अर्थ" },
-  { id: "topic7.html", title: "योग का महत्व" },
-  { id: "topic8.html", title: "वेद और शास्त्र" },
-  { id: "topic9.html", title: "सेवा का महत्व" }
+   { id: "samaj.html", title: "सनातन धर्म क्या है?" },
+  { id: "samaj.html", title: "ॐ का अर्थ" },
+  { id: "samaj.html", title: "योग का महत्व" },
+  { id: "samaj.html", title: "वेद और शास्त्र" },
+  { id: "samaj.html", title: "सेवा का महत्व" }
 ];
 
 const list = document.getElementById('topics-list');
@@ -105,13 +105,30 @@ if (list) {
       if (progressBar) progressBar.style.width = `${((currentPage + 1) / totalPages) * 100}%`;
     }
 
-    if (prevPageBtn) prevPageBtn.addEventListener('click', () => {
-      if (currentPage > 0) { currentPage--; render(); }
-    });
 
-    if (nextPageBtn) nextPageBtn.addEventListener('click', () => {
-      if (currentPage < totalPages - 1) { currentPage++; render(); }
-    });
+    if (prevPageBtn) prevPageBtn.addEventListener('click', () => {
+  if (currentPage > 0) { 
+    currentPage--; 
+    render(); 
+    window.scrollTo({ top: document.getElementById("web-book").offsetTop, behavior: "smooth" });
+  }
+});
+
+if (nextPageBtn) nextPageBtn.addEventListener('click', () => {
+  if (currentPage < totalPages - 1) { 
+    currentPage++; 
+    render(); 
+    window.scrollTo({ top: document.getElementById("web-book").offsetTop, behavior: "smooth" });
+  }
+});
+
+   // if (prevPageBtn) prevPageBtn.addEventListener('click', () => {
+     // if (currentPage > 0) { currentPage--; render(); }
+    //});
+
+    //if (nextPageBtn) nextPageBtn.addEventListener('click', () => {
+     // if (currentPage < totalPages - 1) { currentPage++; render(); }
+   // });
 
     // Font-size buttons
     const incBtn = document.getElementById('increase-font');
@@ -316,3 +333,338 @@ function updateBreakdown() {
 
 // You can add interactivity later
 console.log("Article section loaded ✔️");
+
+
+
+function submitDetails() {
+  let name = document.getElementById("name").value;
+  let whatsapp = document.getElementById("whatsapp").value;
+  let gmail = document.getElementById("gmail").value;
+
+  if (!name || (!whatsapp && !gmail)) {
+    alert("Please enter your name and either WhatsApp or Gmail ID");
+    return;
+  }
+
+  // Replace with your Apps Script URL
+  let scriptURL = "https://script.google.com/macros/s/AKfycbxXzIL66ozP2A3UCZxeeuVGwyOVMYGniAtgiLk5pYLWhDlXgXnDzkiJlnWWoCA3lj-9Ag/exec";
+
+  fetch(scriptURL, {
+    method: 'POST',
+    body: JSON.stringify({ name, whatsapp, gmail })
+  })
+  .then(res => res.text())
+  .then(response => {
+    console.log("Saved:", response);
+    // Hide popup and show blog content
+    document.getElementById("accessPopup").style.display = "none";
+    document.getElementById("blogContent").style.display = "block";
+  })
+  .catch(error => console.error("Error!", error.message));
+}
+
+
+
+
+
+
+
+
+
+
+
+function openPopup() {
+  document.getElementById("accessPopup").style.display = "flex";
+}
+function closePopup() {
+  document.getElementById("accessPopup").style.display = "none";
+}
+
+function submitDetails() {
+  let name = document.getElementById("name").value;
+  let whatsapp = document.getElementById("whatsapp").value;
+  let gmail = document.getElementById("gmail").value;
+
+  if (!name || (!whatsapp && !gmail)) {
+    alert("⚠️ Please enter your name and at least WhatsApp or Gmail/Insta ID");
+    return;
+  }
+
+  // Your Google Apps Script URL (must be deployed as Web App with 'Anyone' access)
+  let scriptURL = "https://script.google.com/macros/s/AKfycbxXzIL66ozP2A3UCZxeeuVGwyOVMYGniAtgiLk5pYLWhDlXgXnDzkiJlnWWoCA3lj-9Ag/exec";
+
+  fetch(scriptURL, {
+    method: 'POST',
+    body: JSON.stringify({ name, whatsapp, gmail })
+  })
+  .then(res => res.text())
+  .then(response => {
+    console.log("Saved:", response);
+    alert("✅ Details submitted successfully!");
+    document.getElementById("accessPopup").style.display = "none";
+    document.getElementById("blogContent").style.display = "block";
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  })
+  .catch(error => console.error("Error!", error.message));
+}
+
+
+
+
+
+
+(async function() {
+  const scriptURL = "https://script.google.com/macros/s/AKfycbyFBYXCZ9x783iHQsYjhF-Vd2mL653yoV0YllwcZeRJlptiAtf_KOu7DeMPv64oucjp/exec"; // <<--- REPLACE with your /exec URL
+  const submitBtn = document.getElementById('feedbackSubmit');
+  const textarea = document.getElementById('feedbackText');
+  const msg = document.getElementById('feedbackMessage');
+
+  function showMessage(text, isError = false) {
+    msg.style.display = 'block';
+    msg.textContent = text;
+    msg.style.color = isError ? '#ff6b6b' : '#8cffc6';
+  }
+
+  async function postJson(payload) {
+    return fetch(scriptURL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=UTF-8',
+        'Accept': 'text/plain'
+      },
+      body: JSON.stringify(payload),
+      mode: 'cors'
+    });
+  }
+
+  async function postForm(payload) {
+    return fetch(scriptURL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+        'Accept': 'text/plain'
+      },
+      body: new URLSearchParams(payload),
+      mode: 'cors'
+    });
+  }
+
+  submitBtn.addEventListener('click', async function () {
+    const text = textarea.value.trim();
+    msg.style.display = 'none';
+
+    if (!text) {
+      alert('Please enter feedback before submitting.');
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    const payload = { Text: text };
+
+    try {
+      // Try JSON first
+      let res = await postJson(payload);
+      let resText = await res.text();
+      console.log('JSON POST status:', res.status, 'response:', resText);
+
+      if (!res.ok) {
+        // If server returned non-2xx, try form fallback
+        console.warn('JSON POST failed, trying form fallback...');
+        res = await postForm(payload);
+        resText = await res.text();
+        console.log('Form POST status:', res.status, 'response:', resText);
+      }
+
+      if (!res.ok) {
+        showMessage('Server error: ' + (resText || res.statusText || 'Unknown'), true);
+        console.error('Final response not OK:', res.status, resText);
+      } else {
+        showMessage('✅ Thank you — feedback saved!');
+        textarea.value = '';
+      }
+    } catch (networkErr) {
+      console.error('Network/Fetch error:', networkErr);
+      showMessage('Network error: ' + networkErr.message, true);
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Submit Feedback';
+    }
+  });
+})();
+
+
+
+
+
+
+
+
+
+
+
+// Product page Js
+function flipCard(id){
+  const card = document.getElementById(id);
+  if(!card) return;
+  card.classList.toggle('flipped');
+}
+
+// Initialize Bootstrap carousels when DOM is ready
+if (typeof window !== 'undefined'){
+  document.addEventListener('DOMContentLoaded', function(){
+    // Ensure Bootstrap is available
+    if (typeof bootstrap !== 'undefined' && bootstrap.Carousel){
+      document.querySelectorAll('.carousel').forEach(function(el){
+        // getOrCreateInstance prevents double-init
+        bootstrap.Carousel.getOrCreateInstance(el, { interval: false, ride: false });
+      });
+    } else {
+      console.warn('Bootstrap JS not found. Make sure bootstrap.bundle.min.js is loaded before your main.js');
+    }
+
+    // Optional: improve touch swipe sensitivity on mobile (Bootstrap includes swipe by default)
+  });
+}
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelector(".slides");
+  const slideCount = document.querySelectorAll(".slide").length;
+  const indicators = document.querySelector(".indicators");
+
+  let currentIndex = 0;
+  let startX = 0;
+  let isDragging = false;
+
+  // Create dots dynamically
+  for (let i = 0; i < slideCount; i++) {
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+    if (i === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => moveToSlide(i));
+    indicators.appendChild(dot);
+  }
+
+  function moveToSlide(index) {
+    slides.style.transform = `translateX(-${index * 100}%)`;
+    document.querySelectorAll(".dot").forEach(dot => dot.classList.remove("active"));
+    document.querySelectorAll(".dot")[index].classList.add("active");
+    currentIndex = index;
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slideCount;
+    moveToSlide(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+    moveToSlide(currentIndex);
+  }
+
+  // Auto Slide every 5s
+  let autoSlide = setInterval(nextSlide, 5000);
+
+  // --- Swipe / Drag Support ---
+  slides.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+    isDragging = true;
+    clearInterval(autoSlide);
+  });
+
+  slides.addEventListener("touchend", (e) => {
+    if (!isDragging) return;
+    let endX = e.changedTouches[0].clientX;
+    handleSwipe(startX, endX);
+    isDragging = false;
+    autoSlide = setInterval(nextSlide, 5000);
+  });
+
+  slides.addEventListener("mousedown", (e) => {
+    startX = e.clientX;
+    isDragging = true;
+    clearInterval(autoSlide);
+  });
+
+  slides.addEventListener("mouseup", (e) => {
+    if (!isDragging) return;
+    let endX = e.clientX;
+    handleSwipe(startX, endX);
+    isDragging = false;
+    autoSlide = setInterval(nextSlide, 5000);
+  });
+
+  function handleSwipe(start, end) {
+    let diff = start - end;
+    if (Math.abs(diff) > 50) { // minimum swipe distance
+      if (diff > 0) nextSlide();
+      else prevSlide();
+    }
+  }
+});
+
+
+
+
+
+
+// Countdown Timer ,coming soon page
+(function countdownTimer() {
+  // Set target launch date (YYYY, MM-1, DD)
+  const launchDate = new Date("2025-12-31T00:00:00").getTime();
+
+  const daysEl = document.getElementById("days");
+  const hoursEl = document.getElementById("hours");
+  const minutesEl = document.getElementById("minutes");
+  const secondsEl = document.getElementById("seconds");
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = launchDate - now;
+
+    if (distance <= 0) {
+      document.getElementById("countdown").innerHTML = "<h2>🎉 We're Live!</h2>";
+      clearInterval(timer);
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    daysEl.textContent = days.toString().padStart(2, "0");
+    hoursEl.textContent = hours.toString().padStart(2, "0");
+    minutesEl.textContent = minutes.toString().padStart(2, "0");
+    secondsEl.textContent = seconds.toString().padStart(2, "0");
+  }
+
+  const timer = setInterval(updateCountdown, 1000);
+  updateCountdown();
+})();
+
+
+
+
+
+
+
+
+
+// Example: dynamically change alert every 10s alert bar
+const alertMessages = [
+  "🔥 Upcoming Blog: 'Secrets of Ancient Wisdom' — Stay Tuned! 🔔",
+  "📖 New Chapter releasing soon: 'Power of Discipline' 💡",
+  "✨ Special Series on Sanatan Philosophy coming this week!"
+];
+
+let currentMsg = 0;
+const alertText = document.querySelector(".alert-text");
+
+setInterval(() => {
+  currentMsg = (currentMsg + 1) % alertMessages.length;
+  alertText.textContent = alertMessages[currentMsg];
+}, 10000);
