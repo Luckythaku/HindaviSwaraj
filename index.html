@@ -7,7 +7,7 @@
 
   <!-- Google Font: Mukta -->
   <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <!-- ===== Navbar ===== -->
@@ -30,6 +30,7 @@
       <a href="seva.html">सेवा</a>
       <a href="daan.html">दान</a>
       <a href="store.html">स्टोर</a>
+      <a href="Festivals.html">त्योहार</a>
     </nav>
   </header>
 
@@ -38,7 +39,7 @@
   <section id="facts">
     <div class="container">
       <div class="fact-card">
-        <p id="fact-number">तथ्य #1</p>
+        <p id="fact-number"><strong>तथ्य #1</strong></p>
         <p id="fact-text"></p>
       </div>
       <div class="navigation">
@@ -48,58 +49,54 @@
     </div>
   </section>
 
-  <!-- ===== Landing ===== -->
-  <section id="landing">
-    <div class="landing-content">
-     <!-- <h1>कट्टर सनातनी में आपका स्वागत है</h1>
-      <p>सनातन धर्म के हृदय से अनमोल तथ्य और ज्ञान खोजें।<br>पीढ़ियों से संचित प्राचीन बुद्धि को जानें।</p>-->
-      <a href="#topics" class="scroll-button"> Read more ↓</a>
+
+
+
+
+
+
+
+<!-- ===== Message Section ===== -->
+<section id="message-section" class="message-section">
+  <div class="container">
+    <!-- Show Button -->
+    <button class="toggle-btns" id="showMessageBtn">🌟 My Mission </button>
+
+    <!-- Sliding Message Box -->
+    <div class="message-box" id="messageBox">
+      <button class="close-btnn" id="closeBtn">&times;</button>
+
+      <!-- Language Buttons -->
+      <div class="lang-buttons">
+        <button id="hindiBtn">हिंदी</button>
+        <button id="englishBtn">English</button>
+      </div>
+
+      <!-- Message Content -->
+      <div id="messageContent">
+        <h2>🚀 समाज सुधार की शुरुआत खुद से</h2>
+        <p>
+          यह सिर्फ़ एक वेबसाइट नहीं, बल्कि एक जागृति का मंच है।  
+          यहाँ हम साझा करेंगे – अनुभव, सत्य, अच्छाई-बुराई का अंतर और वे समाधान 
+          जो हमारे समाज को बेहतर बना सकते हैं।  
+        </p><br>
+        <p><strong>“आइए जुड़ें इस प्रयास से…  
+        क्योंकि जब हम बदलेंगे, तब समाज बदलेगा।”</strong></p>
+      </div>
     </div>
-  </section>
-
-  <section class="moto-section">
-    <div class="moto-container">
-      <p class="highlight">
-        🚀 <strong>“समाज सुधार की शुरुआत खुद से – और प्रेरणा पूरे हिंदू समाज तक।”</strong>
-      </p> <br>
-      <p>
-        "यह सिर्फ़ एक वेबसाइट नहीं, बल्कि एक जागृति का मंच है।
-          यहाँ हम साझा करेंगे – अनुभव, सत्य, अच्छाई-बुराई का अंतर और वे समाधान जो हमारे समाज को बेहतर बना सकते हैं।"
-      </p>
-      <p><h3>English Translation </h3>
-        Here, you won’t just find content, but a vision: to inspire, to empower, 
-        and to make a difference. This website is built with love, passion, and 
-        a relentless drive to move forward.  
-      </p>
-      <p class="highlight">
-        🚀 <strong>“आइए जुड़ें इस प्रयास से…
-                क्योंकि जब हम बदलेंगे, तब समाज बदलेगा।” <br> वन्दे मातरम् 🙏 - जय श्री राम 🚩 </strong><br>
-
-      </p>
-
-    <!--<div class="article-rating">
-  <p>Rate this article:</p>
-  <div class="star-rating">
-    <span data-star="1">★</span>
-    <span data-star="2">★</span>
-    <span data-star="3">★</span>
-    <span data-star="4">★</span>
-    <span data-star="5">★</span>
   </div>
-  <p id="ratingResult">Average Rating: Not rated yet</p>
-  <div id="ratingBreakdown"></div>  ⬅️ NEW breakdown section 
-</div>-->
+</section>
 
-  </section>
 
- <!-- ===== Landing ===== -->
+ 
+ <!-- ===== Landing ===== 
   <section id="landing">
     <div class="landing-content">
      <!-- <h1>कट्टर सनातनी में आपका स्वागत है</h1>
-      <p>सनातन धर्म के हृदय से अनमोल तथ्य और ज्ञान खोजें।<br>पीढ़ियों से संचित प्राचीन बुद्धि को जानें।</p>-->
-      <a href="#topics-list" class="scroll-button"> Read more ↓</a>
+      <p>सनातन धर्म के हृदय से अनमोल तथ्य और ज्ञान खोजें।<br>पीढ़ियों से संचित प्राचीन बुद्धि को जानें।</p>
+      <a href="Festivals.html" class="scroll-button"> Read more ↓</a>
     </div>
-  </section>
+  </section>-->
 
 <!--
 <div id="accessPopup" class="popup-overlay">
@@ -113,7 +110,31 @@
 </div>
 -->
 
-  <!-- ===== Web Book / Reader Section (book UI) ===== -->
+
+
+
+
+
+<!-- Full Blog Popup -->
+<div id="popup-full" class="popup-overlay">
+  <div class="popup-container">
+    <h3>📖 नया ब्लॉग पढ़ें</h3>
+    <p>हमने आपके लिए नया लेख लिखा है। पहले इसे पढ़ना ज़रूरी है:</p>
+    <a href="Festivals.html" class="popup-link">👉 अभी पढ़ें</a>
+    <button id="popup-close-btn">ठीक है</button>
+  </div>
+</div>
+
+<!-- Mini Popup Button -->
+<button id="popup-mini-btn" class="popup-mini-btn">📖 नया ब्लॉग</button>
+
+
+
+
+
+
+
+ <!-- ===== Web Book / Reader Section (book UI) ===== -->
   <section id="web-book" class="book-section container">
     <h2 class="section-title" >मेरी सोच, मेरा लक्ष्य</h2>
 
@@ -145,6 +166,14 @@
     </div>
   </section>
 
+
+
+
+
+
+
+
+  
   <!-- Hidden Source Content (loaded by JS into the reader) -->
   <article id="source-content" class="hidden">
     <div class="page-content">
@@ -360,7 +389,7 @@
   </section>-->
 
 
-  <!-- ===== Topics ===== -->
+  <!--===== Topics =====
   <section id="topics">
     <h2 class="section-title"; >Explore Topics</h2>
     <div id="topics-list" class="tags-container"></div>
@@ -369,7 +398,7 @@
   <section class="feedback-section">
     <h2>Leave Your Feedback ⭐</h2>
 
-    <!-- Star Rating -->
+     Star Rating 
     <div class="star-rating">
       <span data-star="5">★</span>
       <span data-star="4">★</span>
@@ -378,23 +407,85 @@
       <span data-star="1">★</span>
     </div>
 
-    <!-- Feedback Form -->
+    <!-- Feedback Form 
     <textarea id="feedbackText" placeholder="Write your feedback here..."></textarea>
     <button id="submitFeedback" class="feedback-btn">Submit</button> <!-- here i have adde class id to prevent other buttons of page to do not get change -->
 
-    <!-- Display Feedbacks -->
+    <!-- Display Feedbacks 
     <div id="feedbackList">
       <h3>User Feedback</h3>
       <ul id="feedbackItems"></ul>
     </div>
-  </section>
+  </section>-->
 
-  <!-- ===== Footer ===== -->
-  <footer>
-    <p>© 2025 कट्टर सनातनी. सर्वाधिकार सुरक्षित।</p>
-  </footer>
 
-  <script src="script.js"></script>
+
+  <!-- Minimalistic Image Carousel -->
+<section class="carousel-container">
+  <div class="carousel">
+    <div class="carousel-track">
+      <div class="carousel-slide"><img src="photos/maa1.jpeg" alt="Image 1"></div>
+      <div class="carousel-slide"><img src="photos/maa2.jpeg" alt="Image 2"></div>
+      <div class="carousel-slide"><img src="photos/maa3.jpeg" alt="Image 3"></div>
+      <div class="carousel-slide"><img src="photos/maa4.jpeg" alt="Image 4"></div>
+      <div class="carousel-slide"><img src="photos/maa5.jpeg" alt="Image 4"></div>
+      <div class="carousel-slide"><img src="photos/maa6.jpeg" alt="Image 4"></div>
+      <div class="carousel-slide"><img src="photos/maa7.jpeg" alt="Image 4"></div>
+      <div class="carousel-slide"><img src="photos/maa8.jpeg" alt="Image 4"></div>
+    </div>
+    <button class="carousel-btn prev">&#10094;</button>
+    <button class="carousel-btn next">&#10095;</button>
+  </div>
+  <div class="carousel-dots"></div>
+</section>
+
+<!-- Lightbox Popup -->
+<div class="lightbox" id="lightbox">
+  <span class="close-btn">&times;</span>
+  <img class="lightbox-img" src="" alt="Preview">
+</div>
+
+
+  
+
+<!-- ===== Footer Section ===== -->
+<footer class="site-footer">
+  <div class="footer-content">
+    
+    
+
+    <!-- Logo (clickable) -->
+    <a href="index.html" class="footer-logo">
+      <img src="https://media.istockphoto.com/id/1585020633/photo/saffron-flag-india.jpg?s=612x612&w=0&k=20&c=SBVPQuWBQLKVTb50CcfZoe3lSEoMMoGEXUhVizkdll4=" alt="Website Logo">
+    
+    </a>
+
+
+    <!-- Social Media Icons -->
+    <div class="footer-social">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <!-- Contact Us -->
+    <div class="footer-contact">
+      <a href="contact.html">📩 Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Go to Top Button -->
+  <button class="go-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">⬆</button>
+</footer>
+
+<!-- Font Awesome (for icons) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+
+  <script src="scripts.js"></script>
+  <script src="popup.js"></script>
 </body>
 </html>
 

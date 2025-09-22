@@ -7,7 +7,7 @@
 
   <!-- Google Font: Mukta -->
   <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <!-- ===== Navbar ===== -->
@@ -64,8 +64,62 @@
 <!-- ===== Scrolling Alert Bar ===== -->
 <div class="alert-bar">
   <span class="alert-text">🔥 Upcoming Blog: "Secrets of Ancient Wisdom" — Stay Tuned! 🔔</span>
+
+
 </div>
 
+
+<!-- ===== Message Section ===== -->
+<section id="message-section" class="message-section">
+  <div class="container">
+    <!-- Show Button -->
+    <button class="toggle-btns" id="showMessageBtn">🌟 Our Mission </button>
+
+    <!-- Sliding Message Box -->
+    <div class="message-box" id="messageBox">
+      <button class="close-btnn" id="closeBtn">&times;</button>
+
+      <!-- Language Buttons -->
+      <div class="lang-buttons">
+        <button id="hindiBtn">हिंदी</button>
+        <button id="englishBtn">English</button>
+      </div>
+
+      <!-- Message Content -->
+      <div id="messageContent">
+        <h2>🚀 समाज सुधार की शुरुआत खुद से</h2>
+        <p>
+          यह सिर्फ़ एक वेबसाइट नहीं, बल्कि एक जागृति का मंच है।  
+          यहाँ हम साझा करेंगे – अनुभव, सत्य, अच्छाई-बुराई का अंतर और वे समाधान 
+          जो हमारे समाज को बेहतर बना सकते हैं।  
+        </p>
+        <p><strong>“आइए जुड़ें इस प्रयास से…  
+        क्योंकि जब हम बदलेंगे, तब समाज बदलेगा।”</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<!-- Full Blog Popup -->
+<div id="popup-full" class="popup-overlay">
+  <div class="popup-container">
+    <h3>📖 नया ब्लॉग पढ़ें</h3>
+    <p>हमने आपके लिए नया लेख लिखा है। पहले इसे पढ़ना ज़रूरी है:</p>
+    <a href="Festivals.html" class="popup-link">👉 अभी पढ़ें</a>
+    <button id="popup-close-btn">ठीक है</button>
+  </div>
+</div>
+
+<!-- Mini Popup Button -->
+<button id="popup-mini-btn" class="popup-mini-btn">📖 नया ब्लॉग</button>
 
 
 
@@ -162,9 +216,7 @@
 
 
 
-
-  <!-- ===== Footer ===== -->
-  <!-- ===== Footer Section ===== -->
+<!-- ===== Footer Section ===== -->
 <footer class="site-footer">
   <div class="footer-content">
     
@@ -199,6 +251,11 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 
-  <script src="script.js"></script>
+
+
+  <script src="scripts.js"></script>
+<script src="popup.js"></script>
+
+
 </body>
 </html>

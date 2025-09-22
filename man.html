@@ -7,7 +7,7 @@
 
   <!-- Google Font: Mukta -->
   <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <!-- ===== Navbar ===== -->
@@ -56,193 +56,88 @@
     </div>
   </section>
 
-  <!-- ===== Web Book / Reader Section (book UI) ===== -->
-  <section id="web-book" class="book-section container">
-    <!-- 
-    <h2 class="section-title"  style ="color: #fff; text-align: center;">📖 वेब पुस्तक / ब्लॉग</h2>
--->
-    <div class="reader-toolbar">
-      <div class="left">
-        <h3 class="book-title">गलत दिशा की ओर बढ़ते बच्चे, बुरी संगत असर</h3>
-        <div class="meta">
-          <span id="page-indicator">पेज 1 / 3</span>
-        </div>
+<!-- ===== Scrolling Alert Bar ===== -->
+<div class="alert-bar">
+  <span class="alert-text">🔥 Upcoming Blog: "Secrets of Ancient Wisdom" — Stay Tuned! 🔔</span>
+</div>
+
+
+
+
+
+<!-- ===== Message Section ===== -->
+<section id="message-section" class="message-section">
+  <div class="container">
+    <!-- Show Button -->
+    <button class="toggle-btns" id="showMessageBtn">🌟 Our Mission </button>
+
+    <!-- Sliding Message Box -->
+    <div class="message-box" id="messageBox">
+      <button class="close-btnn" id="closeBtn">&times;</button>
+
+      <!-- Language Buttons -->
+      <div class="lang-buttons">
+        <button id="hindiBtn">हिंदी</button>
+        <button id="englishBtn">English</button>
       </div>
-      <div class="right">
-      <button class="btn outlined" id="decrease-font">A–</button>
-        <button class="btn outlined" id="increase-font">A+</button>
-       <!--  <button class="btn" id="theme-toggle">🌙</button>-->
-        <button class="btn outlined" id="translate-btn">🌐 Translate</button>
+
+      <!-- Message Content -->
+      <div id="messageContent">
+        <h2>🚀 समाज सुधार की शुरुआत खुद से</h2>
+        <p>
+          यह सिर्फ़ एक वेबसाइट नहीं, बल्कि एक जागृति का मंच है।  
+          यहाँ हम साझा करेंगे – अनुभव, सत्य, अच्छाई-बुराई का अंतर और वे समाधान 
+          जो हमारे समाज को बेहतर बना सकते हैं।  
+        </p>
+        <p><strong>“आइए जुड़ें इस प्रयास से…  
+        क्योंकि जब हम बदलेंगे, तब समाज बदलेगा।”</strong></p>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="progress-wrap">
-      <div class="progress-bar" id="progress-bar"></div>
+
+
+<!-- Full Blog Popup -->
+<div id="popup-full" class="popup-overlay">
+  <div class="popup-container">
+    <h3>📖 नया ब्लॉग पढ़ें</h3>
+    <p>हमने आपके लिए नया लेख लिखा है। पहले इसे पढ़ना ज़रूरी है:</p>
+    <a href="Festivals.html" class="popup-link">👉 अभी पढ़ें</a>
+    <button id="popup-close-btn">ठीक है</button>
+  </div>
+</div>
+
+<!-- Mini Popup Button -->
+<button id="popup-mini-btn" class="popup-mini-btn">📖 नया ब्लॉग</button>
+
+
+
+
+
+
+
+ <!-- ===== Coming Soon Section ===== -->
+<section id="coming-soon" class="coming-soon-section">
+  <div class="coming-box">
+    <h1 class="coming-title">🚀 Coming Soon</h1>
+    <p class="coming-subtitle">We are crafting something amazing. Stay tuned for the launch!</p>
+
+    <!-- Countdown -->
+    <div id="countdown" class="countdown">
+      <div><span id="days">00</span><small>Days</small></div>
+      <div><span id="hours">00</span><small>Hours</small></div>
+      <div><span id="minutes">00</span><small>Minutes</small></div>
+      <div><span id="seconds">00</span><small>Seconds</small></div>
     </div>
 
-    <div class="book">
-      <div id="pages" class="pages"></div>
-      <div class="controls">
-        <button class="btn large" id="prev-page">← पिछला</button>
-        <button class="btn large primary" id="next-page">अगला →</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Hidden Source Content (loaded by JS into the reader) -->
-  <article id="source-content" class="hidden">
-    <div class="page-content">
-      <h2 style ="color: #f79a1b;">कहाँ और कैसे ये असर हो रहा है?</h2>
-         <h3> - सोशल मीडिया</h3>
-      <p class="hindi">* रील्स, शॉर्ट्स, TikTok जैसे कंटेंट में luxury, show-off, fashion, पार्टी लाइफ, hook-up culture दिखाया जाता है।</p>
-      
-      <p class="hindi">* Western celebrity culture (Hollywood, K-pop, influencers) ज़्यादा role models बन रहे हैं।</p>
-      <p class="hindi">* “वायरल होने” और “followers बढ़ाने” की चाहत में youth गलत आदतें कॉपी कर रहे हैं।</p>
-<br>
-      <h3> - पढ़ाई व शिक्षा का वातावरण</h3>
-
-      <p class="hindi">* स्कूल-कॉलेज में संस्कार और धर्मिक शिक्षा की कमी।</p>
-      <p class="hindi">* केवल नौकरी/पैसे की दौड़ में भागना, character building और moral teaching कम।</p><br>
-
-       <h3> - परिवार और समाज में बदलाव</h3>
-
-       <p class="hindi">* Parents खुद mobile, TV, Netflix में busy रहते हैं।</p>
-      <p class="hindi">* बच्चों के साथ समय कम बिताते हैं, जिससे बच्चे दूसरों से influence होते हैं।</p>
-      <p class="hindi">* संयुक्त परिवार कम हो रहे हैं, दादी-नानी से कहानियाँ और संस्कार कम मिलते हैं।</p><br>
-
-      <h2 style ="color: #f79a1b;"> - Lifestyle & Westernisation</h2>
-
-      <p class="hindi">*  Night parties, pubs, alcohol, smoking, drugs को "cool" माना जाने लगा।</p>
-      <p class="hindi">*  Fashion, modern dressing, boyfriend-girlfriend culture को “modern life” समझा जाने लगा।</p>
-      <p class="hindi">*  Fast food, laziness और materialistic life health और character दोनों खराब कर रहे हैं।</p><br>
-
-      <h3> - Media & Entertainment</h3>
-
-      <p class="hindi">* Movies, web series में violence, lust, betrayal, western lifestyle ज़्यादा दिखाया जाता है।</p>
-      <p class="hindi">* Hero/heroine गलत काम करके भी famous और rich दिखाए जाते हैं → youth सोचते हैं यही success है।</p><br>
-
-      <h3> - Peer Pressure (दोस्तों का दबाव)</h3>
-
-      <p class="hindi">* "Cool दिखना है", "modern बनना है", "outdated मत लगो" – इस सोच से युवा गलत आदतें सीखते हैं।</p>
-      <p class="hindi">* अगर कोई धार्मिक, simple life जीता है तो दोस्त उसे backward बोलते हैं।</p><br>
-
-      <h2 style ="color: #f79a1b;">समाधान (How to Save New Generation):</h2>
-      <p class="hindi">*  घर में संस्कार और धर्म की शिक्षा देना (कहानियाँ, भजन, पूजा, satsang)।</p>
-      <p class="hindi">*  बच्चों के साथ समय बिताना, उन्हें दोस्त बनकर सही-गलत समझाना।</p>
-      <p class="hindi">*  Social media के positive उपयोग (शिक्षा, संस्कृति, motivation) को बढ़ावा देना।</p>
-      <p class="hindi">*  Villages, temples, gurukuls जैसी जगहों पर बच्चों को exposure देना।</p>
-      <p class="hindi">*  Role models बदलना – महापुरुष, freedom fighters, संत, विज्ञानियों की जीवनियाँ पढ़ाना।</p><br>
-
-      <!--<p class="english hidden">Sanatan Dharma is not just a belief, but an art of living.</p>
-      <p class="english hidden">This book presents various dimensions of life practice in simple language.</p>-->
-
-      <!--<img src="https://cdn.pixabay.com/photo/2023/10/05/19/45/ai-generated-8296854_640.jpg" alt="Page 1" class="page-image" />-->
-    </div>
-
-    <div class="page-content">
-      <h2 style ="color: #f79a1b;"> - घर से शुरुआत (Parents’ Role)</h2>
-
-      <p class="hindi">*  🏠 संस्कार घर से आते हैं → माता-पिता को खुद अपने बच्चों के सामने good role model बनना होगा।</p>
-      <p class="hindi">*  📖 रोज़ कम से कम 10-15 मिनट बच्चों को रामायण, महाभारत, भगवद्गीता, संतों की कथाएँ सुनाएँ।</p>
-      <p class="hindi">*  🕉️ घर में छोटी-सी सुबह/शाम आरती, भजन, ध्यान की परंपरा बनाइए। बच्चे देखकर सीखते हैं।</p>
-      <p class="hindi">*  ❌ माता-पिता भी mobile addiction, गालियाँ, झगड़े avoid करें → बच्चे कॉपी नहीं करेंगे।</p><br>
-      
-
-      <h3> - Education System + Gurukul Style</h3>
-
-      <p class="hindi">* 📚 केवल marks पर नहीं, moral education + character building पर ज़ोर दें।</p>
-      <p class="hindi">* 🎓 बच्चों को महापुरुषों (छत्रपति शिवाजी, स्वामी विवेकानंद, महाराणा प्रताप, झाँसी की रानी) की life stories पढ़ाएँ।</p>
-      <p class="hindi">* 🏫 स्कूलों/कोचिंग में weekly संस्कार session होना चाहिए → संस्कृत श्लोक, योग, ध्यान।</p>
-      <p class="hindi">* Cultural activities (नाटक, भजन प्रतियोगिता, संस्कृत दिवस) → बच्चों का झुकाव भारतीय संस्कृति की ओर बढ़ेगा।</p><br>
-
-      <h3> - Technology & Social Media Control</h3>
-
-      <p class="hindi">* 📵 बच्चों को mobile/laptop use का समय तय कर के दें। (max 1–2 घंटे)</p>
-      <p class="hindi">* 📺 TV और web series की जगह culture-based movies, डॉक्यूमेंट्री दिखाएँ।</p><br>
-      <p class="hindi">* 🎥 अगर बच्चा reels/YouTube देखता है तो उसे motivational, devotional, science-based content दिखाएँ।</p>
-      <p class="hindi">* 👨‍👩‍👧 मिलकर family में “No mobile zone” बनाइए (खाना खाते वक्त, मंदिर जाते वक्त)।</p><br>
-
-
-      <h3> - Physical + Outdoor Activities</h3>
-
-      <p class="hindi">* 🏹 बच्चों को खेळ-खिलाड़ी (sports), योग, ध्यान, martial arts की ट्रेनिंग दिलाएँ।</p>
-      <p class="hindi">* 🌳 गाँव/प्रकृति/temple trips कराएँ ताकि वो real Bharat देख सकें।</p>
-      <p class="hindi">* 🚫 पार्टियों, pubs, alcohol culture से दूर रखने के लिए camping, trekking, satsang trips organize करें।</p>
-      <br>
-
-      <h3> - सही दोस्ती व वातावरण (Peer Influence)</h3>
-
-      <p class="hindi">* 🤝 Parents को पता होना चाहिए बच्चा किन दोस्तों के साथ है।</p>
-      <p class="hindi">* 🎯 बच्चों को सिखाएँ कि “हर modern चीज़ सही नहीं होती, और हर परंपरा पुरानी नहीं होती”।</p>
-      <p class="hindi">* 👥 बच्चों को ऐसे groups में डालें जहाँ अच्छे संस्कार, leadership और service activities हों। (जैसे – NSS, Scouts, मंदिर मंडल, NGO activities)।</p>
-      <br>
-
-      <!--<p class="english hidden">Discipline is the bridge that turns intentions into results.</p>
-      <p class="english hidden">The ancient sages said – "Only through discipline does man attain divinity."</p>-->
-
-      <!--<img src="https://cdn.pixabay.com/photo/2023/07/15/23/41/ai-generated-8129793_640.jpg" alt="Page 2" class="page-image" />-->
-    </div>
-
-    <!--<div class="page-content">
-      <h2 style ="color: #f79a1b;">समाधान (How to Save New Generation):</h2>
-      <p class="hindi">*  घर में संस्कार और धर्म की शिक्षा देना (कहानियाँ, भजन, पूजा, satsang)।</p>
-      <p class="hindi">*  बच्चों के साथ समय बिताना, उन्हें दोस्त बनकर सही-गलत समझाना।</p>
-      <p class="hindi">*  Social media के positive उपयोग (शिक्षा, संस्कृति, motivation) को बढ़ावा देना।</p><br>
-      <p class="hindi">*  Villages, temples, gurukuls जैसी जगहों पर बच्चों को exposure देना।</p>
-      <p class="hindi">*  Role models बदलना – महापुरुष, freedom fighters, संत, विज्ञानियों की जीवनियाँ पढ़ाना।</p><br>-->
-      
-
-
-     <!-- <p class="english hidden">The idea of "Vasudhaiva Kutumbakam" begins with family and extends to society.</p>
-      <p class="english hidden">When every home is filled with love and cooperation, society automatically becomes strong.</p>
-
-      <img src="https://cdn.pixabay.com/photo/2017/06/29/18/37/sri-lanka-2455698_640.jpg" alt="Page 3" class="page-image" />-->
-    </div>
-
-    <!--<div class="page-content">
-      <h2>अध्याय 1: आत्म-अनुशासन</h2>
-      <p class="hindi">अनुशासन वह सेतु है जो इरादों को परिणामों में बदलता है।</p>
-      <p class="hindi">प्राचीन ऋषि कहते थे – "अनुशासन से ही मनुष्य देवत्व को प्राप्त करता है।"</p>
-
-      <p class="english hidden">Discipline is the bridge that turns intentions into results.</p>
-      <p class="english hidden">The ancient sages said – "Only through discipline does man attain divinity."</p>
-
-      <img src="https://cdn.pixabay.com/photo/2023/07/15/23/41/ai-generated-8129793_640.jpg" alt="Page 2" class="page-image" />
-    </div>-->
-
-
-    <div class="page-content">
-      <h3>Role Models & Inspirations</h3>
-      <p class="hindi"> * 🌟 बच्चों के role model सिर्फ actors/celebs न हों।</p>
-      <p class="hindi"> * 📖 उनके सामने महापुरुष, saints, वैज्ञानिक, freedom fighters की life रखिए।</p>
-      <p class="hindi"> * 🎤 Swami Vivekananda, APJ Abdul Kalam, Shivaji Maharaj की biography पढ़ने/देखने को दें।</p><br>
-
-     <!-- <p class="english hidden">Discipline is the bridge that turns intentions into results.</p>
-      <p class="english hidden">The ancient sages said – "Only through discipline does man attain divinity."</p>
-
-      <img src="https://cdn.pixabay.com/photo/2023/07/15/23/41/ai-generated-8129793_640.jpg" alt="Page 2" class="page-image" />
-    </div>-->
-<h3>Self-Identity & Pride</h3>
-      <p class="hindi"> * 🇮🇳 बच्चों में Indian culture, festivals, भाषा, धर्म पर गर्व पैदा करें।</p>
-      <p class="hindi"> * 🎉 Diwali, Holi, Makar Sankranti जैसे त्यौहार family के साथ मनाएँ।</p>
-      <p class="hindi"> * 👕 Traditional पहनावे और regional भाषा को भी modernity के बराबर importance दें।</p><br>
-
-      <h3>Service & Responsibility</h3>
-      <p class="hindi"> * 🙌 बच्चों को बचपन से ही सेवा (seva) और जिम्मेदारी सिखाएँ।</p>
-      <p class="hindi"> * मंदिर/गाँव की सफाई करना।</p>
-      <p class="hindi"> * पेड़ लगाना।</p>
-      <p class="hindi"> * गरीबों की मदद करना।/p><br>
-        <p class="hindi"> * इससे उनमें compassion + discipline + responsibility आएगी।</p>
-
-
-        <h2 style ="color: #f79a1b;">कहाँ और कैसे ये असर हो रहा है?</h2>
-
-      <p class="hindi">*  Parents → संस्कार</p>
-      <p class="hindi">*  School → Moral Education + Culture</p>
-      <p class="hindi">*  Society → Good Environment</p>
-      <p class="hindi">*  Youth Role Model → Saints + Freedom Fighters</p><br>
-    
-  </article>
+    <!-- Optional Email Signup -->
+    <form class="subscribe-form">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Notify Me</button>
+    </form>
+  </div>
+</section>
 
   <!-- ===== Topics ===== -->
   <section id="topics">
@@ -250,11 +145,42 @@
     <div id="topics-list" class="tags-container"></div>
   </section>
 
-  <!-- ===== Footer ===== -->
-  <footer>
-    <p>© 2025 कट्टर सनातनी. सर्वाधिकार सुरक्षित।</p>
-  </footer>
+  
+<!-- ===== Footer Section ===== -->
+<footer class="site-footer">
+  <div class="footer-content">
+    
+    
 
-  <script src="script.js"></script>
+    <!-- Logo (clickable) -->
+    <a href="index.html" class="footer-logo">
+      <img src="https://media.istockphoto.com/id/1585020633/photo/saffron-flag-india.jpg?s=612x612&w=0&k=20&c=SBVPQuWBQLKVTb50CcfZoe3lSEoMMoGEXUhVizkdll4=" alt="Website Logo">
+    
+    </a>
+
+
+    <!-- Social Media Icons -->
+    <div class="footer-social">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <!-- Contact Us -->
+    <div class="footer-contact">
+      <a href="contact.html">📩 Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Go to Top Button -->
+  <button class="go-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">⬆</button>
+</footer>
+
+<!-- Font Awesome (for icons) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script src="scripts.js"></script>
+<script src="popup.js"></script>
 </body>
 </html>

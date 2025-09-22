@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kattar Sanatani - Facts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font: Mukta -->
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ===== Navbar ===== -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="https://cdn.pixabay.com/photo/2016/07/23/16/19/symbol-1537054_1280.png" alt="Logo" />
+      </a>
+      <div id="logo-text" class="logo-text">हिंदवी स्वराज</div>
+    </div>
+
+    <!-- Hamburger for mobile -->
+    <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+    <nav class="nav-links">
+      <a href="man.html">पुरुष</a>
+      <a href="woman.html">महिला</a>
+      <a href="parents.html">माता-पिता</a>
+      <a href="samaj.html">समाज</a>
+      <a href="seva.html">सेवा</a>
+      <a href="daan.html">दान</a>
+      <a href="store.html">स्टोर</a>
+      <a href="Festivals.html">tyohar</a>
+    </nav>
+  </header>
+
+
+  <!-- ===== Facts ===== -->
+  <section id="facts">
+    <div class="container">
+      <div class="fact-card">
+        <p id="fact-number">तथ्य #1</p>
+        <p id="fact-text"></p>
+      </div>
+      <div class="navigation">
+        <button id="prev-fact">← पिछला</button>
+        <button id="next-fact">अगला →</button>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+<!-- ===== Message Section ===== -->
+<section id="message-section" class="message-section">
+  <div class="container">
+    <!-- Show Button -->
+    <button class="toggle-btns" id="showMessageBtn">🌟 My Mission </button>
+
+    <!-- Sliding Message Box -->
+    <div class="message-box" id="messageBox">
+      <button class="close-btnn" id="closeBtn">&times;</button>
+
+      <!-- Language Buttons -->
+      <div class="lang-buttons">
+        <button id="hindiBtn">हिंदी</button>
+        <button id="englishBtn">English</button>
+      </div>
+
+      <!-- Message Content -->
+      <div id="messageContent">
+        <h2>🚀 समाज सुधार की शुरुआत खुद से</h2>
+        <p>
+          यह सिर्फ़ एक वेबसाइट नहीं, बल्कि एक जागृति का मंच है।  
+          यहाँ हम साझा करेंगे – अनुभव, सत्य, अच्छाई-बुराई का अंतर और वे समाधान 
+          जो हमारे समाज को बेहतर बना सकते हैं।  
+        </p>
+        <p><strong>“आइए जुड़ें इस प्रयास से…  
+        क्योंकि जब हम बदलेंगे, तब समाज बदलेगा।”</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ 
+ <!-- ===== Landing ===== 
+  <section id="landing">
+    <div class="landing-content">
+     <!-- <h1>कट्टर सनातनी में आपका स्वागत है</h1>
+      <p>सनातन धर्म के हृदय से अनमोल तथ्य और ज्ञान खोजें।<br>पीढ़ियों से संचित प्राचीन बुद्धि को जानें।</p
+      <a href="#topics-list" class="scroll-button"> Read more ↓</a>
+    </div>
+  </section>-->
+
+<!--
+<div id="accessPopup" class="popup-overlay">
+  <div class="popup-box">
+    <h2>Enter Details to Continue</h2>
+    <input type="text" id="name" placeholder="Your Name">
+    <input type="text" id="whatsapp" placeholder="Phone Number">
+    <input type="email" id="gmail" placeholder="Insta ID">
+    <button onclick="submitDetails()">Submit</button>
+  </div>
+</div>
+-->
+
+<!-- Minimalistic Image Carousel -->
+<section class="carousel-container">
+  <div class="carousel">
+    <div class="carousel-track">
+      <div class="carousel-slide"><img src="photos/maa1.jpeg" alt="Image 1"></div>
+      <div class="carousel-slide"><img src="photos/maa2.jpeg" alt="Image 2"></div>
+      <div class="carousel-slide"><img src="photos/maa3.jpeg" alt="Image 3"></div>
+      <div class="carousel-slide"><img src="photos/maa4.jpeg" alt="Image 4"></div>
+      <div class="carousel-slide"><img src="photos/maa5.jpeg" alt="Image 4"></div>
+      <div class="carousel-slide"><img src="photos/maa6.jpeg" alt="Image 4"></div>
+      <div class="carousel-slide"><img src="photos/maa7.jpeg" alt="Image 4"></div>
+      <div class="carousel-slide"><img src="photos/maa8.jpeg" alt="Image 4"></div>
+    </div>
+    <button class="carousel-btn prev">&#10094;</button>
+    <button class="carousel-btn next">&#10095;</button>
+  </div>
+  <div class="carousel-dots"></div>
+</section>
+
+<!-- Lightbox Popup -->
+<div class="lightbox" id="lightbox">
+  <span class="close-btn">&times;</span>
+  <img class="lightbox-img" src="" alt="Preview">
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- ===== Web Book / Reader Section (book UI) ===== -->
+  <section id="web-book" class="book-section container">
+    <!-- 
+    <h2 class="section-title"  style ="color: #fff; text-align: center;">📖 वेब पुस्तक / ब्लॉग</h2>
+-->
+    <div class="reader-toolbar">
+      <div class="left">
+        <h3 class="book-title">🌺 नवरात्रि: भक्ति, शक्ति और आत्मशुद्धि का पर्व</h3>
+        <div class="meta">
+          <span id="page-indicator">पेज 1 / 3</span>
+        </div>
+      </div>
+      <div class="right">
+      <button class="btn outlined" id="decrease-font">A–</button>
+        <button class="btn outlined" id="increase-font">A+</button>
+       <!--  <button class="btn" id="theme-toggle">🌙</button>-->
+        <button class="btn outlined" id="translate-btn">🌐 Translate</button>
+      </div>
+    </div>
+
+    <div class="progress-wrap">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+
+    <div class="book">
+      <div id="pages" class="pages"></div>
+      <div class="controls">
+        <button class="btn large" id="prev-page">← पिछला</button>
+        <button class="btn large primary" id="next-page">अगला →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hidden Source Content (loaded by JS into the reader) -->
+  <article id="source-content" class="hidden">
+    <div class="page-content">
+        <p class="hindi">नवरात्रि केवल एक त्योहार नहीं है, यह एक आध्यात्मिक साधना है। नौ रातों तक मां दुर्गा के नौ रूपों की पूजा</p> 
+        <p class="hindi">हमें जीवन जीने के सच्चे मूल्यों, शक्ति, संयम और भक्ति का मार्ग दिखाती है।</p> <br>
+         <p class="hindi">आज के समय में जहां त्योहार अक्सर मौज-मस्ती और दिखावे तक सीमित हो गए हैं, वहीं नवरात्रि हमें याद</p> 
+         <p class="hindi">दिलाती है कि असली आनंद देवी के चरणों में भक्ति और आत्मशुद्धि में है।</p> <br>
+
+
+      <h2 style ="color: #f79a1b;">🙏 नवरात्रि का महत्व</h2>
+        
+      <p class="hindi">* आत्मा और मन की शुद्धि</p>
+      
+      <p class="hindi">* नकारात्मकता और अहंकार का विनाश</p>
+      <p class="hindi">* शक्ति, साहस और विश्वास का जागरण</p>
+      <p class="hindi">* मां दुर्गा के नौ रूपों से जीवन के अलग-अलग पहलू सीखना </p> <br>
+
+
+      <div style="overflow-x:auto;">
+  <table border="1" cellspacing="0" cellpadding="8" align="center">
+    <thead>
+      <tr>
+        <th>दिन</th>
+        <th> देवी का रूप</th>
+        <th>संदेश महिलाओं व पुरुषों के लिए</th>
+        <th>रंग</th>
+        <th>विशेषता</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td align="center">1</td>
+        <td align="center">शैलपुत्री</td>
+        <td align="center">स्थिरता, आत्मविश्वास</td>
+        <td align="center">लाल</td>
+        <td align="center">पर्वतराज की पुत्री, शक्ति का आरंभ</td>
+      </tr>
+      <tr>
+        <td align="center">2</td>
+        <td align="center">ब्रह्मचारिणी</td>
+        <td align="center">तपस्या, संयम</td>
+        <td align="center">सफेद</td>
+        <td align="center">कठोर साधना की मूर्ति</td>
+        
+      </tr>
+
+      <tr>
+        <td align="center">3</td>
+        <td align="center">चंद्रघंटा</td>
+        <td align="center">साहस, भय पर नियंत्रण</td>
+        <td align="center">पीला</td>
+        <td align="center">रक्षक स्वरूप</td>
+      </tr>
+ <tr>
+        <td align="center">4</td>
+        <td align="center">कूष्मांडा</td>
+        <td align="center">सृजनात्मकता, ऊर्जा</td>
+        <td align="center">हरा</td>
+        <td align="center">सृष्टि की रचयिता</td>
+      </tr>
+
+      <tr>
+        <td align="center">5</td>
+        <td align="center">स्कंदमाता</td>
+        <td align="center">मातृत्व, दया</td>
+        </td><td align="center">ग्रे</td>
+        <td align="center">भगवान कार्तिकेय की माता</td>
+      </tr>
+      <tr>
+        <td align="center">6</td>
+        <td align="center">कात्यायनी</td>
+        <td align="center">न्यायप्रियता, वीरता</td>
+        <td align="center">नारंगी</td>
+         <td align="center">राक्षसों का संहार करने वाली</td>
+      </tr>
+
+      <tr>
+        <td align="center">7</td>
+        <td align="center">कालरात्रि</td>
+        <td align="center">नकारात्मकता का नाश</td>
+        <td align="center">नीला</td>
+         <td align="center">तपस्या और पवित्रता का प्रतीक</td>
+      </tr>
+<tr>
+        <td align="center">8</td>
+        <td align="center">महागौरी</td>
+        <td align="center">शुद्धता, सुंदरता</td>
+        <td align="center">गुलाबी</td>
+        <td align="center">राक्षसों का संहार करने वाली</td>
+      </tr>
+<tr>
+        <td align="center">9</td>
+        <td align="center">सिद्धिदात्री</td>
+        <td align="center">सिद्धियाँ, मुक्ति</td>
+        <td align="center">बैंगनी</td>
+        <td align="center">सभी शक्तियों की दात्री</td>
+      </tr>
+
+
+    </tbody>
+  </table>
+</div>
+
+
+<br>
+      <h3> 🕉️ पूजा की सही विधि </h3>
+
+      <p class="hindi">* कलश स्थापना: पहले दिन गंगाजल, आम के पत्ते, नारियल के साथ कलश स्थापित करें।</p>
+      <p class="hindi">* दैनिक पूजा: स्नान कर शुद्ध वस्त्र पहनें, दीपक जलाएं, मंत्र जाप करें।</p>
+      <p class="hindi">* देवी पाठ: दुर्गा सप्तशती, कवच, अर्गला स्तोत्र का पाठ करें।</p>
+      <p class="hindi">* कन्या पूजन: अष्टमी/नवमी को नौ कन्याओं का पूजन व भोजन कराएं।</p>
+      <p class="hindi">* उपवास और संयम: सात्विक आहार लें, नशा व अशुद्ध आचरण से बचें।</p><br>
+
+       <h3> 🌸 महिलाओं और लड़कियों के लिए नवरात्रि</h3>
+
+       <p class="hindi">* व्रत से सीख: आत्म-नियंत्रण, धैर्य और सहनशीलता।</p>
+      <p class="hindi">* पूजा से सीख: भक्ति, एकाग्रता और सकारात्मक ऊर्जा।</p>
+      <p class="hindi">* देवी कथाओं से सीख: साहस, न्यायप्रियता, करुणा और मातृत्व।</p>
+      <p class="hindi">* <b>ध्यान व सेवा से सीख: मानसिक शांति, सामाजिक जिम्मेदारी और आत्मविश्वास।</b></p>
+      <p class="hindi"> <strong>👉 नवरात्रि महिलाओं को सिखाती है कि शक्ति, सौंदर्य और शुद्धता उनके भीतर ही है।</strong></p>
+      <br>
+
+      <h2 style ="color: #f79a1b;">🚫 क्या न करें</h2>
+
+      <p class="hindi">* शराब, मांसाहार, जुआ और अश्लील गीतों से दूर रहें।</p>
+      <p class="hindi">*  त्योहार को केवल पार्टी या दिखावा न बनाएं।</p>
+      <p class="hindi">* देवी का अपमान करने वाले कार्यों से बचें।</p><br>
+
+      <h3>🌟 अगर सही ढंग से मनाएं तो लाभ</h3>
+
+      <p class="hindi">* मन में शांति और स्थिरता</p>
+      <p class="hindi">* आत्मविश्वास और साहस में वृद्धि</p>
+      <p class="hindi">* परिवार में प्रेम और खुशहाली</p>
+      <p class="hindi">* नकारात्मक शक्तियों से सुरक्षा</p>
+      <p class="hindi">* समृद्धि और सफलता की प्राप्ति</p><br>
+
+      <h3>🪔 निष्कर्ष</h3>
+
+      <p class="hindi">* नवरात्रि हमें सिखाती है कि त्योहार का असली आनंद पूजा, भक्ति, संयम और सेवा में है। यह नौ दिन हमा</p>
+      <p class="hindi">* जीवन को बदलने की शक्ति रखते हैं—अगर हम उन्हें सही भाव से जी लें।</p><br>
+
+      <h2 style ="color: #f79a1b;">🌺 इस बार नवरात्रि को सिर्फ "फेस्टिवल" नहीं, बल्कि आध्यात्मिक यात्रा बनाएं।</h2>
+      
+      <!--<p class="english hidden">Sanatan Dharma is not just a belief, but an art of living.</p>
+      <p class="english hidden">This book presents various dimensions of life practice in simple language.</p>-->
+
+      <!--<img src="https://cdn.pixabay.com/photo/2023/10/05/19/45/ai-generated-8296854_640.jpg" alt="Page 1" class="page-image" />-->
+    </div>
+
+   <!-- <div class="page-content">
+      <h2 style ="color: #f79a1b;"> - घर से शुरुआत (Parents’ Role)</h2>
+
+      <p class="hindi">*  🏠 संस्कार घर से आते हैं → माता-पिता को खुद अपने बच्चों के सामने good role model बनना होगा।</p>
+      <p class="hindi">*  📖 रोज़ कम से कम 10-15 मिनट बच्चों को रामायण, महाभारत, भगवद्गीता, संतों की कथाएँ सुनाएँ।</p>
+      <p class="hindi">*  🕉️ घर में छोटी-सी सुबह/शाम आरती, भजन, ध्यान की परंपरा बनाइए। बच्चे देखकर सीखते हैं।</p>
+      <p class="hindi">*  ❌ माता-पिता भी mobile addiction, गालियाँ, झगड़े avoid करें → बच्चे कॉपी नहीं करेंगे।</p><br>
+      
+
+      <h3> - Education System + Gurukul Style</h3>
+
+      <p class="hindi">* 📚 केवल marks पर नहीं, moral education + character building पर ज़ोर दें।</p>
+      <p class="hindi">* 🎓 बच्चों को महापुरुषों (छत्रपति शिवाजी, स्वामी विवेकानंद, महाराणा प्रताप, झाँसी की रानी) की life stories पढ़ाएँ।</p>
+      <p class="hindi">* 🏫 स्कूलों/कोचिंग में weekly संस्कार session होना चाहिए → संस्कृत श्लोक, योग, ध्यान।</p>
+      <p class="hindi">* Cultural activities (नाटक, भजन प्रतियोगिता, संस्कृत दिवस) → बच्चों का झुकाव भारतीय संस्कृति की ओर बढ़ेगा।</p><br>
+
+      <h3> - Technology & Social Media Control</h3>
+
+      <p class="hindi">* 📵 बच्चों को mobile/laptop use का समय तय कर के दें। (max 1–2 घंटे)</p>
+      <p class="hindi">* 📺 TV और web series की जगह culture-based movies, डॉक्यूमेंट्री दिखाएँ।</p><br>
+      <p class="hindi">* 🎥 अगर बच्चा reels/YouTube देखता है तो उसे motivational, devotional, science-based content दिखाएँ।</p>
+      <p class="hindi">* 👨‍👩‍👧 मिलकर family में “No mobile zone” बनाइए (खाना खाते वक्त, मंदिर जाते वक्त)।</p><br>
+
+
+      <h3> - Physical + Outdoor Activities</h3>
+
+      <p class="hindi">* 🏹 बच्चों को खेळ-खिलाड़ी (sports), योग, ध्यान, martial arts की ट्रेनिंग दिलाएँ।</p>
+      <p class="hindi">* 🌳 गाँव/प्रकृति/temple trips कराएँ ताकि वो real Bharat देख सकें।</p>
+      <p class="hindi">* 🚫 पार्टियों, pubs, alcohol culture से दूर रखने के लिए camping, trekking, satsang trips organize करें।</p>
+      <br>
+
+      <h3> - सही दोस्ती व वातावरण (Peer Influence)</h3>
+
+      <p class="hindi">* 🤝 Parents को पता होना चाहिए बच्चा किन दोस्तों के साथ है।</p>
+      <p class="hindi">* 🎯 बच्चों को सिखाएँ कि “हर modern चीज़ सही नहीं होती, और हर परंपरा पुरानी नहीं होती”।</p>
+      <p class="hindi">* 👥 बच्चों को ऐसे groups में डालें जहाँ अच्छे संस्कार, leadership और service activities हों। (जैसे – NSS, Scouts, मंदिर मंडल, NGO activities)।</p>
+      <br>
+
+      <!--<p class="english hidden">Discipline is the bridge that turns intentions into results.</p>
+      <p class="english hidden">The ancient sages said – "Only through discipline does man attain divinity."</p>-->
+
+      <!--<img src="https://cdn.pixabay.com/photo/2023/07/15/23/41/ai-generated-8129793_640.jpg" alt="Page 2" class="page-image" />-->
+    </div>
+
+    <!--<div class="page-content">
+      <h2 style ="color: #f79a1b;">समाधान (How to Save New Generation):</h2>
+      <p class="hindi">*  घर में संस्कार और धर्म की शिक्षा देना (कहानियाँ, भजन, पूजा, satsang)।</p>
+      <p class="hindi">*  बच्चों के साथ समय बिताना, उन्हें दोस्त बनकर सही-गलत समझाना।</p>
+      <p class="hindi">*  Social media के positive उपयोग (शिक्षा, संस्कृति, motivation) को बढ़ावा देना।</p><br>
+      <p class="hindi">*  Villages, temples, gurukuls जैसी जगहों पर बच्चों को exposure देना।</p>
+      <p class="hindi">*  Role models बदलना – महापुरुष, freedom fighters, संत, विज्ञानियों की जीवनियाँ पढ़ाना।</p><br>-->
+      
+
+
+     <!-- <p class="english hidden">The idea of "Vasudhaiva Kutumbakam" begins with family and extends to society.</p>
+      <p class="english hidden">When every home is filled with love and cooperation, society automatically becomes strong.</p>
+
+      <img src="https://cdn.pixabay.com/photo/2017/06/29/18/37/sri-lanka-2455698_640.jpg" alt="Page 3" class="page-image" />-->
+    </div>
+
+    <!--<div class="page-content">
+      <h2>अध्याय 1: आत्म-अनुशासन</h2>
+      <p class="hindi">अनुशासन वह सेतु है जो इरादों को परिणामों में बदलता है।</p>
+      <p class="hindi">प्राचीन ऋषि कहते थे – "अनुशासन से ही मनुष्य देवत्व को प्राप्त करता है।"</p>
+
+      <p class="english hidden">Discipline is the bridge that turns intentions into results.</p>
+      <p class="english hidden">The ancient sages said – "Only through discipline does man attain divinity."</p>
+
+      <img src="https://cdn.pixabay.com/photo/2023/07/15/23/41/ai-generated-8129793_640.jpg" alt="Page 2" class="page-image" />
+    </div>-->
+
+
+  <!--  <div class="page-content">
+      <h3>Role Models & Inspirations</h3>
+      <p class="hindi"> * 🌟 बच्चों के role model सिर्फ actors/celebs न हों।</p>
+      <p class="hindi"> * 📖 उनके सामने महापुरुष, saints, वैज्ञानिक, freedom fighters की life रखिए।</p>
+      <p class="hindi"> * 🎤 Swami Vivekananda, APJ Abdul Kalam, Shivaji Maharaj की biography पढ़ने/देखने को दें।</p><br>-->
+
+     <!-- <p class="english hidden">Discipline is the bridge that turns intentions into results.</p>
+      <p class="english hidden">The ancient sages said – "Only through discipline does man attain divinity."</p>
+
+      <img src="https://cdn.pixabay.com/photo/2023/07/15/23/41/ai-generated-8129793_640.jpg" alt="Page 2" class="page-image" />
+    </div>-->
+ <!--<h3>Self-Identity & Pride</h3>
+      <p class="hindi"> * 🇮🇳 बच्चों में Indian culture, festivals, भाषा, धर्म पर गर्व पैदा करें।</p>
+      <p class="hindi"> * 🎉 Diwali, Holi, Makar Sankranti जैसे त्यौहार family के साथ मनाएँ।</p>
+      <p class="hindi"> * 👕 Traditional पहनावे और regional भाषा को भी modernity के बराबर importance दें।</p><br>
+
+      <h3>Service & Responsibility</h3>
+      <p class="hindi"> * 🙌 बच्चों को बचपन से ही सेवा (seva) और जिम्मेदारी सिखाएँ।</p>
+      <p class="hindi"> * मंदिर/गाँव की सफाई करना।</p>
+      <p class="hindi"> * पेड़ लगाना।</p>
+      <p class="hindi"> * गरीबों की मदद करना।/p><br>
+        <p class="hindi"> * इससे उनमें compassion + discipline + responsibility आएगी।</p>
+
+
+        <h2 style ="color: #f79a1b;">कहाँ और कैसे ये असर हो रहा है?</h2>
+
+      <p class="hindi">*  Parents → संस्कार</p>
+      <p class="hindi">*  School → Moral Education + Culture</p>
+      <p class="hindi">*  Society → Good Environment</p>
+      <p class="hindi">*  Youth Role Model → Saints + Freedom Fighters</p><br>-->
+    
+  </article>
+
+
+
+
+
+
+
+  <!--
+<section class="article-section">
+    <div class="article-header">
+      <h2>Latest Articles</h2>
+      <p>Stay updated with our most recent insights, guides, and stories</p>
+    </div>
+
+    <div class="articles">
+      <!-- Article 1
+      <div class="article-card">
+        <div class="article-image">
+          <img src="https://picsum.photos/600/400?random=1" alt="Article Image 1">
+        </div>
+        <div class="article-content">
+          <h3>How to Boost Your Productivity</h3>
+          <p>Discover simple strategies to stay focused, organized, and get more done in less time...</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
+
+      <!-- Article 2 
+      <div class="article-card">
+        <div class="article-image">
+          <img src="https://picsum.photos/600/400?random=2" alt="Article Image 2">
+        </div>
+        <div class="article-content">
+          <h3>Top 10 Web Design Trends 2025</h3>
+          <p>Explore the most popular design patterns that are shaping the web development world...</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
+
+      <!-- Article 3 
+      <div class="article-card">
+        <div class="article-image">
+          <img src="https://picsum.photos/600/400?random=3" alt="Article Image 3">
+        </div>
+        <div class="article-content">
+          <h3>Healthy Lifestyle Hacks</h3>
+          <p>Learn how small daily habits can make a huge difference in your health and well-being...</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>-->
+
+
+  <!--===== Topics =====
+  <section id="topics">
+    <h2 class="section-title"; >Explore Topics</h2>
+    <div id="topics-list" class="tags-container"></div>
+  </section>
+
+  <section class="feedback-section">
+    <h2>Leave Your Feedback ⭐</h2>
+
+     Star Rating 
+    <div class="star-rating">
+      <span data-star="5">★</span>
+      <span data-star="4">★</span>
+      <span data-star="3">★</span>
+      <span data-star="2">★</span>
+      <span data-star="1">★</span>
+    </div>
+
+    <!-- Feedback Form 
+    <textarea id="feedbackText" placeholder="Write your feedback here..."></textarea>
+    <button id="submitFeedback" class="feedback-btn">Submit</button> <!-- here i have adde class id to prevent other buttons of page to do not get change -->
+
+    <!-- Display Feedbacks 
+    <div id="feedbackList">
+      <h3>User Feedback</h3>
+      <ul id="feedbackItems"></ul>
+    </div>
+  </section>-->
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>© 2025 कट्टर सनातनी. सर्वाधिकार सुरक्षित।</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
+
+
+
